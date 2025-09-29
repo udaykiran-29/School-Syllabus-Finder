@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  background: white;
+  margin-top: 30px;
+  border-radius: 12px;
+}
+
+.form select, .form button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.subjects ul {
+  list-style: none;
+  padding: 0;
+}
+
+.subjects li {
+  margin: 8px 0;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.subjects li:hover {
+  text-decoration: underline;
+}
+
+.syllabus-page {
+  padding: 30px;
+}
