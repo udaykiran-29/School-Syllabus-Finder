@@ -6,6 +6,9 @@ import "./Dropdowns.css";
 const classes = ["LKG", "UKG", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 const states = ["Andhra Pradesh", "Telangana"];
 
+// ✅ Base URL for your backend (Render)
+const BASE_URL = "https://school-syllabus-finder-1.onrender.com";
+
 function Dropdowns() {
   const [board, setBoard] = useState("");
   const [state, setState] = useState("");
@@ -15,7 +18,7 @@ function Dropdowns() {
 
   const handleGetSubjects = async () => {
     try {
-      let url = `http://localhost:5000/api/subjects?board=${board}&className=${className}`;
+      let url = `${BASE_URL}/api/subjects?board=${board}&className=${className}`;
       if (board === "SSC") url += `&state=${state}`;
 
       const res = await axios.get(url);
@@ -27,7 +30,7 @@ function Dropdowns() {
 
   const handleSubjectClick = async (subject) => {
     try {
-      let url = `http://localhost:5000/api/syllabus?board=${board}&className=${className}&subject=${subject}`;
+      let url = `${BASE_URL}/api/syllabus?board=${board}&className=${className}&subject=${subject}`;
       if (board === "SSC") url += `&state=${state}`;
 
       const res = await axios.get(url);
